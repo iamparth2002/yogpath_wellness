@@ -8,7 +8,7 @@ const Home2 = () => {
   const [searchVal, setSearchVal] = useState(null);
   const [searchTitles, setSearchTitles] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:4000/yogas', {
+    fetch('https://yogpath-wellness-project.vercel.app/yogas', {
       credentials: 'include',
     })
       .then((data) => data.json())
