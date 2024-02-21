@@ -8,7 +8,7 @@ const Explore = () => {
   const [value, setValue] = useState(2000);
   const [rating, setRating] = useState(5);
   useEffect(() => {
-    fetch('http://localhost:4000/yogas', {
+    fetch('https://yogpath-wellness-project.vercel.app/yogas', {
       credentials: 'include',
     })
       .then((data) => data.json())
