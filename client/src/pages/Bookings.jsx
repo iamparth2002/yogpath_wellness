@@ -7,7 +7,7 @@ const Bookings = () => {
   const params = useParams();
   const [booked, setBooked] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:4000/bookings/${params.id}`, {
+    fetch(`https://yogpath-wellness-project.vercel.app/bookings/${params.id}`, {
       credentials: 'include',
     }).then((response) => {
       response.json().then((data) => {
