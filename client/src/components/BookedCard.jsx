@@ -14,7 +14,7 @@ const BookedCard = ({ data }) => {
   const deleteBooking = async () => {
     const ans = window.confirm('Are you sure you want to delete this booking?');
     if (ans) {
-      const status = await fetch(`http://localhost:4000/bookings/${_id}`, {
+      const status = await fetch(`https://yogpath-wellness-project.vercel.app/bookings/${_id}`, {
         method: 'DELETE',
       });
       if (status.ok) {
