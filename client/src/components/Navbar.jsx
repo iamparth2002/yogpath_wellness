@@ -11,7 +11,7 @@ const Navbar = () => {
   const [id, setId] = useState('');
   useEffect(() => {
     async function call() {
-      await fetch('http://localhost:4000/profile', {
+      await fetch('https://yogpath-wellness-project.vercel.app/profile', {
         credentials: 'include',
       }).then((response) => {
         response.json().then(({ _id, email, password }) => {
@@ -24,7 +24,7 @@ const Navbar = () => {
   }, [id, setUserInfo]);
 
   const logout = () => {
-    fetch('http://localhost:4000/logout', {
+    fetch('https://yogpath-wellness-project.vercel.app/logout', {
       credentials: 'include',
       method: 'POST',
     });
