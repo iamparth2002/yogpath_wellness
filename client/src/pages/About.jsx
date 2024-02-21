@@ -15,7 +15,7 @@ const About = () => {
   const [redirecttologin, setRedirecttologin] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/yogas/${params.id}`)
+    fetch(`https://yogpath-wellness-project.vercel.app/yogas/${params.id}`)
       .then((data) => data.json())
       .then((data) => setYoga(data));
   }, []);
@@ -29,7 +29,7 @@ const About = () => {
       alert('kindly log into an account');
       setRedirecttologin(true);
     } else {
-      const response = await fetch('http://localhost:4000/bookings', {
+      const response = await fetch('https://yogpath-wellness-project.vercel.app/bookings', {
         method: 'POST',
         body: JSON.stringify({ ...yoga, date, time, user: userInfo._id }),
         headers: { 'Content-type': 'application/json' },
