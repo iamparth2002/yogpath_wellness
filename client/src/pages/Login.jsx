@@ -11,7 +11,7 @@ const Login = () => {
 
   async function login(ev) {
     ev.preventDefault();
-    const response = await fetch('http://localhost:4000/login', {
+    const response = await fetch('https://yogpath-wellness-project.vercel.app/login', {
       method: 'POST',
       body: JSON.stringify({ email, password }),
       headers: { 'Content-type': 'application/json' },
@@ -20,7 +20,7 @@ const Login = () => {
 
     if (response.ok) {
 
-      await fetch('http://localhost:4000/profile', {
+      await fetch('https://yogpath-wellness-project.vercel.app/profile', {
         credentials: 'include',
       }).then((response) => {
         response.json().then(({ _id, email, password }) => {
